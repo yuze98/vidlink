@@ -5,7 +5,7 @@ All script functions in this directory are used in the App vidlink for convertin
 youtube videos to mp3 or mp4 files/ or for downloads playlists.
 
 credits:[Youssef Hatem, yhmourad98@gmail.com]
-
+[hey](www.google.com)
 ## lib used
 the script will take a youtube video url, downloads it and converts it to mp3 or mp4 files
 
@@ -13,4 +13,4 @@ the script will take a youtube video url, downloads it and converts it to mp3 or
     * pip install pytube
     * pip install yt_dlp 
         * yt_dlp is forked from youtube_dl with added features and more updated features
-make sure to download the [ffmpeg-git-full.7z master builds] (https://www.gyan.dev/ffmpeg/builds/) 
+        * make sure to download the [ffmpeg-git-full.7z master builds] (https://www.gyan.dev/ffmpeg/builds/) 
