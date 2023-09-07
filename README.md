@@ -37,6 +37,7 @@ the script will take a youtube video url, downloads it and converts it to mp3 or
         
 ### NOTE
    make sure to download the [ffmpeg-git-full.7z master builds](https://www.gyan.dev/ffmpeg/builds/)
+   and add it inside the utils folder
 
 
 
