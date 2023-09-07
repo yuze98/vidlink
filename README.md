@@ -1,5 +1,5 @@
 # vidlink
-![vidlink](assets/android-chrome-512x512.png)
+<img src="assets/android-chrome-512x512.png" alt="vidlink" width="200"/>
 
 This mini project is developed to download youtube videos locally as an audio mp3 or mp4 format.
 Also provides the option to download a playlist in one of the two formats.
