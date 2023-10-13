@@ -60,15 +60,18 @@ def download_ytvid(video_url, out_folder='_out/', choice='1'):
             song_title = ydl_instance.extract_info(video_url,False)
         except Exception as e:
             print(e)
-        # if its a song check if it already exists if not a song then check for the video
-        if(choice == '1' or choice == '2'):
-            if(exists(out_folder+song_title['title']+'.mp3')):
-                print('el oghneya dih mawgooda yasta')
-                return
-        else:
-            if(exists(out_folder+song_title['title']+'.mp4')):
-                print('el video dih mawgooda yasta')
-                return
+        try:
+            # if its a song check if it already exists if not a song then check for the video
+            if(choice == '1' or choice == '2'):
+                if(exists(out_folder+song_title['title']+'.mp3')):
+                    print('el oghneya dih mawgooda yasta')
+                    return
+            else:
+                if(exists(out_folder+song_title['title']+'.mp4')):
+                    print('el video dih mawgooda yasta')
+                    return
+        except Exception as e:
+            print(e)
         ydl_instance.download([video_url])
     print("Download complete...")
 
@@ -77,10 +80,9 @@ def extract_urls(playlist_url):
     playlist = Playlist(playlist_url)
     playlist._video_regex = r"\"url\":\"(/watch\?v=[\w-]*)"
     return playlist
-
-
+    
 # main function to get called from app.py
-def vidconv(which, url, directory,index='1'):
+def vidconv(which, url, directory, index='1'):
     print(directory)
     # option picker
     # which = input("pick a number[---(1)song---|---(2)song_pl---|---(3)video---|---(4)video_pl---]")
